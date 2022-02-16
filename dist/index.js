@@ -845,6 +845,7 @@ module.exports = (function(e, t) {
     const c = new s({ auth: `token ${a}` });
     async function main() {
       const e = await p.getMyStats({ range: i.LAST_7_DAYS });
+      console.log(e);
       await updateGist(e);
     }
     function trimRightStr(e, t) {
@@ -869,6 +870,7 @@ module.exports = (function(e, t) {
         ];
         r.push(a.join(" "));
       }
+      console.log(r);
       if (r.length == 0) return;
       try {
         const e = Object.keys(t.data.files)[0];
